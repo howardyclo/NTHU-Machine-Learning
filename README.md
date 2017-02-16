@@ -10,9 +10,8 @@ There will be 5 assignments and each is coded with `python/numpy`.
 - Since the course is still on-going, I won't upload the answers of the assignments until each of their deadlines is passed.
 
 ## Syllabus
-1. Introduction. **[Note Complete. Week 1]**
-2. Probably Approximately Correct (PAC) Learning Framework; Learning Guarantees
-for Finite and Infinite Hypothesis Sets. **[Working. Week 1~]**
+1. Introduction. (Week1) `**Note Complete**`
+2. Probably Approximately Correct (PAC) Learning Framework; Learning Guarantees for Finite and Infinite Hypothesis Sets. (Week1~) `**Working**`
 3. Rademacher Complexity, VC‐Dimension.
 4. Support Vector Machines (SVMs), Margin Theory.
 5. Kernel Methods, Positive Definite Symmetric Kernels, Representer Theorem,
