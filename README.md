@@ -7,6 +7,7 @@ NTHU EE6550 Machine Learning lecture notes and assignments for spring semester 2
 - The lecture notes are written in **Chinese**.
 - The assignments are mainly required to implement the ML/DL algorithms **from scratch** without using high-level library like `scikit-learn`.
 There will be 5 assignments and each is coded with `python/numpy`.
+- Since the course is still on-going, I won't upload the assignments answer to here before each of their deadlines.
 
 ## Syllabus
 1. Introduction. **[Note Complete. Week 1]**
@@ -30,8 +31,7 @@ Regression, Lasso.
 Johnson‐Lindenstrauss Lemma.
 12. Reinforcement Learning, Markov Decision Processes, Planning and Learning
 Problems.
-13. Deep Networks; Feedforward Networks, Convolutional Networks, Recurrent   
-and Recursive Nets.
+13. Deep Networks; Feedforward Networks, Convolutional Networks, Recurrent and Recursive Nets.
 14. Representation Learning; Linear Factor Models, Autoencoders.
 15. Structured Probabilistic Models for Deep Learning; Monte Carlo Methods,
 Partition Functions, Approximate Inference.
