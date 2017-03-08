@@ -1,17 +1,15 @@
 # NTHU-Machine-Learning
 
-NTHU EE6550 Machine Learning lecture notes and assignments for spring semester 2017.
+NTHU EE6550 Machine Learning slides and my code solutions for spring semester 2017.
 
 ## Notes
-- Currently, this repo will be continuously updated per week.
-- The lecture notes are written in **Chinese**.
 - The assignments are mainly required to implement the ML/DL algorithms **from scratch** without using high-level library like `scikit-learn`.
 There will be 5 assignments and each is coded with `python/numpy`.
 - Since the course is still on-going, I won't upload the answers of the assignments until each of their deadlines is passed.
 
 ## Syllabus
-1. Introduction. (Week1) `Note Complete`
-2. Probably Approximately Correct (PAC) Learning Framework; Learning Guarantees for Finite and Infinite Hypothesis Sets. (Week1~) `Working`
+1. Introduction. (Week1)
+2. Probably Approximately Correct (PAC) Learning Framework; Learning Guarantees for Finite and Infinite Hypothesis Sets.
 3. Rademacher Complexity, VC‐Dimension.
 4. Support Vector Machines (SVMs), Margin Theory.
 5. Kernel Methods, Positive Definite Symmetric Kernels, Representer Theorem,
