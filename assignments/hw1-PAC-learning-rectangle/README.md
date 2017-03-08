@@ -1,9 +1,7 @@
 # EE6550 Machine Learning HW1 README
-:::info
-Please be sure to **connect to the network** in order to render plots and LaTeX in this README file.
-:::
-Author: 羅右鈞 105062509
-Email: howard.lo@nlplab.cc
+- Author: Yu-Chun Lo
+- Email: howard.lo@nlplab.cc
+- Note: For LateX rendering, it is recommended to read `README.html`.
 
 ## User Manual
 
@@ -63,8 +61,8 @@ Here we show some running examples for different test scenarios:
 - For showing detailed process of verifying generalization guarantee, set the `verbose` input argument to `True` by running `python main.py --verbose=True`.
 - Summing up the above test scenarios, you can also run `python main.py --delta=0.01 --eps=0.1 --mean_x=0.1 --mean_y=0.2 --r_xy=0.3 --rect_min_x=-1 --rect_min_y=0 --rect_max_x=1 --rect_max_y=2 --verbose=True` in once.
 
-Next, we describe reported results in the *Report* section. 
-    
+Next, we describe reported results in the *Report* section.
+
 ## Report
 The plots shown below are from `visualization.ipynb`. The following 2 different experiment settings ($\delta=0.01, \epsilon=0.1$ and $\delta=0.01, \epsilon=0.01$) based on the same "unknown" bivariate normal distribution $P$ with $\mu_X=0,\mu_Y=0, \sigma_X=1, \sigma_Y=1, r_{XY}=0.5\ (0.3 \leq |r_{XY}| \leq 0.7)$ using [`numpy.random.multivariate_normal`](https://docs.scipy.org/doc/numpy/reference/generated/numpy.random.multivariate_normal.html).
 
@@ -78,7 +76,7 @@ The plots shown below are from `visualization.ipynb`. The following 2 different 
 - The following plot illustrates our generated concept $c$:
 ![](https://i.imgur.com/xgtuZOh.png)
 The `+` points represent the "unknown" concept; The blue points represent the points labeled to $1$ (inside concept); The green points represent the points labeled to $0$ (outside concept).
-- Third, we use our PAC-learning algorithm $\mathbb{A}$, which selects the "tightest" rectangle containing the points in our target unknown rectangle (concept), to generate our hypothesis $h_S$ from the labeled sample with size $m=⌈\frac{4}{\epsilon}\ln\frac{4}{\delta}⌉$. The detailed process of generating hypothesis $h_S$ together with an estimation of generalization error $R(h_S)$ within $±0.1\epsilon$ error with the sample size $M_\epsilon = ⌈(19.453/\epsilon)^2⌉$ is reported: 
+- Third, we use our PAC-learning algorithm $\mathbb{A}$, which selects the "tightest" rectangle containing the points in our target unknown rectangle (concept), to generate our hypothesis $h_S$ from the labeled sample with size $m=⌈\frac{4}{\epsilon}\ln\frac{4}{\delta}⌉$. The detailed process of generating hypothesis $h_S$ together with an estimation of generalization error $R(h_S)$ within $±0.1\epsilon$ error with the sample size $M_\epsilon = ⌈(19.453/\epsilon)^2⌉$ is reported:
 ![](https://i.imgur.com/vb1B4UC.png)
 - The following plot illustrates the error region (red `x` points) when estimating generalization error:
 ![](https://i.imgur.com/EuqLjof.png)
@@ -91,6 +89,3 @@ Note that it is hard to make generalization guarantee break if the provided samp
 The experiment steps are same as the above, the overall report is as following:
 ![](https://i.imgur.com/gkx1Sbp.png)
 Note that in each iteration of verifying generalization guarantee, the program needs to compute sample with size $M_\epsilon=3784193$, which may take about $4$ to $5$ minutes.
-
-
-
