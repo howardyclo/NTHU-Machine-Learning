@@ -1,7 +1,7 @@
 # EE6550 Machine Learning HW1 README
 - Author: Yu-Chun Lo
 - Email: howard.lo@nlplab.cc
-- Note: For LateX rendering, it is recommended to read `README.html`.
+- Note: For LaTeX rendering, it is recommended to read `README.html`.
 
 ## User Manual
 

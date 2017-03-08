@@ -33,4 +33,3 @@ Problems.
 15. Structured Probabilistic Models for Deep Learning; Monte Carlo Methods,
 Partition Functions, Approximate Inference.
 16. Deep Generative Models.
-
