@@ -48,10 +48,15 @@ optional arguments:
 ```
 
 Here we show some running examples for different test scenarios:
+
 - For inputting a training data file, which contains a labeled training sample. This labeled training sample is used to train the SVM-learning algorithm which will return a hypothesis after K-fold cross-validation, **place the training data file in the `/dataset` folder**.
+
 - For inputting a testing data file, which contains a labeled testing sample. This labeled testing sample is used to evaluate the performance of the returned hypothesis from the SVM-learning algorithm based on the labeled training sample, **place the testing data file in the `/dataset` folder**.
+
 - For inputting a positive integer **K** to perform K-fold cross-validation to determine the optimal value C of the free parameter C to minimize the cross-validation error, **specify the argument `--K` when running `main.py`** (default value is **5**).
+
 - Summing up the above, you can also run, for example, `python main.py --train_filename="xxx.csv" --test_filename="xxx.csv" --K=5`. Note that training data and test data files must be specified.
+
 - For checking the obtained optimal value C, optimal hypothesis and performance, see the generated log file `<K>-fold-result-[HH:MM:SS].txt`.
 
 Next, we describe reported results in the *Report* section.
