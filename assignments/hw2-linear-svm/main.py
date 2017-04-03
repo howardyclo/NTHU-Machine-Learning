@@ -21,7 +21,7 @@ if __name__ == '__main__':
 
     if not args.C:
         # Perform hyper-parameter optimization (finding best `C` regularization term)
-        num_split = 6
+        num_split = 5
         C_list = np.linspace(0.1, 1.0, num_split).round(2).tolist()
         log_filename = '{}-fold-result-[{}].txt'.format(args.K, datetime.datetime.now().strftime('%H:%M:%S'))
 
