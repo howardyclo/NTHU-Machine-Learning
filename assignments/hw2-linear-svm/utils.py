@@ -6,7 +6,7 @@ def normalize_binary_class_label(y):
 
     binary_class_label = set(y)
     if binary_class_label == {1, -1}: return y
-    if binary_class_label == {1, 0}: return np.vectorize(lambda y: -1 if y == 0 else 1)(y)
+    if binary_class_label == {1, 0}: return np.vectorize(lambda y: 1 if y == 1 else -1)(y)
     if binary_class_label == {'+', '-'}: return np.vectorize(lambda y: 1 if y == '+' else -1 )(y)
     return np.vectorize(lambda y: 1 if y == list(binary_class_label)[0] else -1 )(y)
 

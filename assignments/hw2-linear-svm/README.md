@@ -65,6 +65,9 @@ Next, we describe reported results in the *Report* section.
 
 Note that training on a single hyper-parameter `C` takes about 1~3 minutes. The larger `C` is, the more time it is needed to train a SVM. 
 
+### Data
+Diabetic Retinopathy Debrecen Data Set Data Set from [UCL Machine Learning Repositary](https://archive.ics.uci.edu/ml/datasets/Diabetic+Retinopathy+Debrecen+Data+Set)
+
 ### Experiment Set
 
 Tested on 20 different hyper-parameters `C`
