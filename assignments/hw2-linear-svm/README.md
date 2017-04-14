@@ -1,5 +1,6 @@
 # EE6550 Machine Learning HW2 README
 Linear Support Vector Machine for Binary Classification trained with Sequential Minimal Optimization
+**Notes: For more completed version of SVM and more clean code, please refer to hw3 kernel SVM**
 
 - Author: Yu-Chun (Howard) Lo
 - Email: howard.lo@nlplab.cc
