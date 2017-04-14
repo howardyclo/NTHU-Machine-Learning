@@ -1,0 +1,42 @@
+----------------------------------------------------------------------------------------------------
+[*] Cross validation history:
+ - Parameter: {'kernel_type': 'linear', 'C': 1.0} | Cross validation error: 0.0242424242424
+ - Parameter: {'kernel_type': 'linear', 'C': 0.8} | Cross validation error: 0.0424242424242
+ - Parameter: {'kernel_type': 'linear', 'C': 0.9} | Cross validation error: 0.0424242424242
+ - Parameter: {'kernel_type': 'linear', 'C': 0.7} | Cross validation error: 0.0545454545455
+ - Parameter: {'kernel_type': 'linear', 'C': 0.4} | Cross validation error: 0.0606060606061
+ - Parameter: {'kernel_type': 'linear', 'C': 0.5} | Cross validation error: 0.0606060606061
+ - Parameter: {'kernel_type': 'linear', 'C': 0.6} | Cross validation error: 0.0606060606061
+ - Parameter: {'kernel_type': 'linear', 'C': 0.3} | Cross validation error: 0.0666666666667
+ - Parameter: {'kernel_type': 'linear', 'C': 0.1} | Cross validation error: 0.0787878787879
+ - Parameter: {'kernel_type': 'linear', 'C': 0.2} | Cross validation error: 0.0909090909091
+----------------------------------------------------------------------------------------------------
+[*] Best parameter: {'kernel_type': 'linear', 'C': 1.0}
+[*] Best cross validation error: 0.0242424242424
+[*] Start to train on full training data and evaluate on test data ...
+----------------------------------------------------------------------------------------------------
+[*] Train filename: hw2_grading_iris_ver_vir_training.csv
+[*] Test filename: hw2_grading_iris_ver_vir_testing.csv
+[*] Datetime: 14:03:53
+[*] Best parameter: {'kernel_type': 'linear', 'C': 1.0}
+[*] Lagrange multipliers: [  0.00000000e+00   0.00000000e+00   0.00000000e+00   0.00000000e+00
+   1.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00
+   0.00000000e+00   0.00000000e+00   1.00000000e+00   1.00000000e+00
+   0.00000000e+00   1.00000000e+00   8.71710342e-01   5.21083926e-01
+   0.00000000e+00   0.00000000e+00   0.00000000e+00   0.00000000e+00
+   1.00000000e+00   4.40253071e-01   0.00000000e+00   0.00000000e+00
+   0.00000000e+00   0.00000000e+00   0.00000000e+00   0.00000000e+00
+   0.00000000e+00   0.00000000e+00   0.00000000e+00   0.00000000e+00
+   0.00000000e+00   0.00000000e+00   0.00000000e+00   0.00000000e+00
+   0.00000000e+00   1.00000000e+00   0.00000000e+00   0.00000000e+00
+   0.00000000e+00   0.00000000e+00   0.00000000e+00   0.00000000e+00
+   0.00000000e+00   1.00000000e+00   0.00000000e+00   4.58622180e-01
+   0.00000000e+00   1.00000000e+00   0.00000000e+00   0.00000000e+00
+   1.00000000e+00   2.42861287e-17   0.00000000e+00   0.00000000e+00
+   3.74425158e-01   0.00000000e+00   1.00000000e+00   0.00000000e+00
+   0.00000000e+00   0.00000000e+00   0.00000000e+00   1.00000000e+00
+   0.00000000e+00   0.00000000e+00   1.00000000e+00]
+[*] Weight vector: [ 0.54337463  0.39114527 -1.93380344 -1.9350143 ]
+[*] Bias term: 8.20756080401
+[*] Performance: Train error: 0.0298507462687 | Test error: 0.0
+----------------------------------------------------------------------------------------------------

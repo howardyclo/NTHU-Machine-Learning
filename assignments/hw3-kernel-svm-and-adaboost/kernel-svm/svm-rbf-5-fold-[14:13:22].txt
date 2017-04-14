@@ -1,0 +1,100 @@
+----------------------------------------------------------------------------------------------------
+[*] Cross validation history:
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.61, 'rbf_sigma': 0.32} | Cross validation error: 0.030303030303
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.55, 'rbf_sigma': 0.32} | Cross validation error: 0.0363636363636
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.42, 'rbf_sigma': 0.32} | Cross validation error: 0.0424242424242
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.49, 'rbf_sigma': 0.32} | Cross validation error: 0.0424242424242
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.68, 'rbf_sigma': 0.32} | Cross validation error: 0.0424242424242
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.74, 'rbf_sigma': 0.32} | Cross validation error: 0.0424242424242
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.81, 'rbf_sigma': 0.32} | Cross validation error: 0.0424242424242
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.81, 'rbf_sigma': 0.78} | Cross validation error: 0.0424242424242
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.87, 'rbf_sigma': 0.32} | Cross validation error: 0.0424242424242
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.94, 'rbf_sigma': 0.32} | Cross validation error: 0.0424242424242
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.94, 'rbf_sigma': 1.0} | Cross validation error: 0.0424242424242
+ - Parameter: {'kernel_type': 'rbf', 'C': 1.0, 'rbf_sigma': 0.32} | Cross validation error: 0.0424242424242
+ - Parameter: {'kernel_type': 'rbf', 'C': 1.0, 'rbf_sigma': 1.0} | Cross validation error: 0.0424242424242
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.36, 'rbf_sigma': 0.32} | Cross validation error: 0.0484848484848
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.55, 'rbf_sigma': 0.78} | Cross validation error: 0.0484848484848
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.61, 'rbf_sigma': 0.78} | Cross validation error: 0.0484848484848
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.68, 'rbf_sigma': 0.78} | Cross validation error: 0.0484848484848
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.74, 'rbf_sigma': 0.78} | Cross validation error: 0.0484848484848
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.87, 'rbf_sigma': 0.78} | Cross validation error: 0.0484848484848
+ - Parameter: {'kernel_type': 'rbf', 'C': 1.0, 'rbf_sigma': 0.78} | Cross validation error: 0.0484848484848
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.36, 'rbf_sigma': 0.55} | Cross validation error: 0.0545454545455
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.42, 'rbf_sigma': 0.55} | Cross validation error: 0.0545454545455
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.49, 'rbf_sigma': 0.55} | Cross validation error: 0.0545454545455
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.61, 'rbf_sigma': 0.55} | Cross validation error: 0.0545454545455
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.68, 'rbf_sigma': 0.55} | Cross validation error: 0.0545454545455
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.74, 'rbf_sigma': 0.55} | Cross validation error: 0.0545454545455
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.81, 'rbf_sigma': 0.55} | Cross validation error: 0.0545454545455
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.81, 'rbf_sigma': 1.0} | Cross validation error: 0.0545454545455
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.87, 'rbf_sigma': 0.55} | Cross validation error: 0.0545454545455
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.87, 'rbf_sigma': 1.0} | Cross validation error: 0.0545454545455
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.94, 'rbf_sigma': 0.55} | Cross validation error: 0.0545454545455
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.94, 'rbf_sigma': 0.78} | Cross validation error: 0.0545454545455
+ - Parameter: {'kernel_type': 'rbf', 'C': 1.0, 'rbf_sigma': 0.55} | Cross validation error: 0.0545454545455
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.29, 'rbf_sigma': 0.32} | Cross validation error: 0.0606060606061
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.23, 'rbf_sigma': 0.55} | Cross validation error: 0.0606060606061
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.29, 'rbf_sigma': 0.55} | Cross validation error: 0.0606060606061
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.55, 'rbf_sigma': 0.55} | Cross validation error: 0.0606060606061
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.74, 'rbf_sigma': 1.0} | Cross validation error: 0.0606060606061
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.49, 'rbf_sigma': 0.78} | Cross validation error: 0.0666666666667
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.68, 'rbf_sigma': 1.0} | Cross validation error: 0.0666666666667
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.16, 'rbf_sigma': 0.55} | Cross validation error: 0.0727272727273
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.36, 'rbf_sigma': 0.78} | Cross validation error: 0.0727272727273
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.61, 'rbf_sigma': 1.0} | Cross validation error: 0.0727272727273
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.23, 'rbf_sigma': 0.32} | Cross validation error: 0.0787878787879
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.29, 'rbf_sigma': 0.78} | Cross validation error: 0.0787878787879
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.42, 'rbf_sigma': 0.78} | Cross validation error: 0.0787878787879
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.42, 'rbf_sigma': 1.0} | Cross validation error: 0.0787878787879
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.55, 'rbf_sigma': 1.0} | Cross validation error: 0.0787878787879
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.16, 'rbf_sigma': 0.78} | Cross validation error: 0.0848484848485
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.23, 'rbf_sigma': 0.78} | Cross validation error: 0.0848484848485
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.49, 'rbf_sigma': 1.0} | Cross validation error: 0.0848484848485
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.1, 'rbf_sigma': 0.78} | Cross validation error: 0.0909090909091
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.1, 'rbf_sigma': 0.55} | Cross validation error: 0.0969696969697
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.16, 'rbf_sigma': 1.0} | Cross validation error: 0.0969696969697
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.29, 'rbf_sigma': 1.0} | Cross validation error: 0.0969696969697
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.36, 'rbf_sigma': 1.0} | Cross validation error: 0.0969696969697
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.23, 'rbf_sigma': 1.0} | Cross validation error: 0.109090909091
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.1, 'rbf_sigma': 1.0} | Cross validation error: 0.121212121212
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.16, 'rbf_sigma': 0.32} | Cross validation error: 0.236363636364
+ - Parameter: {'kernel_type': 'rbf', 'C': 1.0, 'rbf_sigma': 0.1} | Cross validation error: 0.339393939394
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.94, 'rbf_sigma': 0.1} | Cross validation error: 0.351515151515
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.87, 'rbf_sigma': 0.1} | Cross validation error: 0.4
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.81, 'rbf_sigma': 0.1} | Cross validation error: 0.430303030303
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.74, 'rbf_sigma': 0.1} | Cross validation error: 0.484848484848
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.1, 'rbf_sigma': 0.1} | Cross validation error: 0.545454545455
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.1, 'rbf_sigma': 0.32} | Cross validation error: 0.545454545455
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.16, 'rbf_sigma': 0.1} | Cross validation error: 0.545454545455
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.23, 'rbf_sigma': 0.1} | Cross validation error: 0.545454545455
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.29, 'rbf_sigma': 0.1} | Cross validation error: 0.545454545455
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.36, 'rbf_sigma': 0.1} | Cross validation error: 0.545454545455
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.42, 'rbf_sigma': 0.1} | Cross validation error: 0.545454545455
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.49, 'rbf_sigma': 0.1} | Cross validation error: 0.545454545455
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.55, 'rbf_sigma': 0.1} | Cross validation error: 0.545454545455
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.61, 'rbf_sigma': 0.1} | Cross validation error: 0.545454545455
+ - Parameter: {'kernel_type': 'rbf', 'C': 0.68, 'rbf_sigma': 0.1} | Cross validation error: 0.545454545455
+----------------------------------------------------------------------------------------------------
+[*] Best parameter: {'kernel_type': 'rbf', 'C': 0.61, 'rbf_sigma': 0.32}
+[*] Best cross validation error: 0.030303030303
+[*] Start to train on full training data and evaluate on test data ...
+----------------------------------------------------------------------------------------------------
+[*] Train filename: hw2_grading_iris_ver_vir_training.csv
+[*] Test filename: hw2_grading_iris_ver_vir_testing.csv
+[*] Datetime: 14:13:42
+[*] Best parameter: {'kernel_type': 'rbf', 'C': 0.61, 'rbf_sigma': 0.32}
+[*] Lagrange multipliers: [ 0.61        0.          0.54563592  0.1753755   0.61        0.          0.61
+  0.61        0.5765565   0.33581574  0.61        0.61        0.61        0.61
+  0.61        0.23433808  0.61        0.          0.33964658  0.          0.61
+  0.61        0.          0.51532176  0.5867939   0.          0.61        0.
+  0.07129608  0.          0.61        0.          0.07659991  0.33161619
+  0.42714413  0.60174132  0.61        0.17864298  0.          0.31950415
+  0.43429174  0.          0.          0.516888    0.6088239   0.61        0.
+  0.25715791  0.19983079  0.61        0.03993215  0.22377926  0.61
+  0.4910848   0.53252488  0.26652393  0.61        0.25908003  0.61
+  0.04435734  0.59619267  0.255254    0.3217921   0.40168435  0.
+  0.51681013  0.35952341]
+[*] Bias term: -0.223902677148
+[*] Performance: Train error: 0.0298507462687 | Test error: 0.030303030303
+----------------------------------------------------------------------------------------------------

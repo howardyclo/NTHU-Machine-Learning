@@ -1,0 +1,18 @@
+----------------------------------------------------------------------------------------------------
+[*] Cross validation history:
+ - Parameter: {'num_classifer': 5} | Cross validation error: 0.369190600522
+ - Parameter: {'num_classifer': 3} | Cross validation error: 0.374934725849
+ - Parameter: {'num_classifer': 4} | Cross validation error: 0.377545691906
+ - Parameter: {'num_classifer': 2} | Cross validation error: 0.391644908616
+ - Parameter: {'num_classifer': 1} | Cross validation error: 0.402088772846
+----------------------------------------------------------------------------------------------------
+[*] Best parameter: {'num_classifer': 5}
+[*] Best cross validation error: 0.369190600522
+[*] Start to train on full training data and evaluate on test data ...
+----------------------------------------------------------------------------------------------------
+[*] Datetime: 13:21:42
+[*] Train filename: messidor_features_training.csv
+[*] Test filename: messidor_features_testing.csv
+[*] Best parameter: {'num_classifer': 5}
+[*] Performance: Train error: 0.330729166667 | Test error: 0.334203655352
+----------------------------------------------------------------------------------------------------

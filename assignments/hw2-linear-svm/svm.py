@@ -62,7 +62,7 @@ class SVM:
 
                 print('-'*100)
                 print('[*] {} | One passes: {} alphas changed.'.format(info, num_changed_alphas))
-                
+
                 if num_changed_alphas == 0:
                     print('[*] {} | Converged.'.format(info))
                     print('-'*100)
