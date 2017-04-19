@@ -28,9 +28,9 @@ class ShallowDecisionTree:
 
             for split_point in split_points:
                 # Choost the hypothesis either classifies one side +1, the other side -1
-                # or classifies one side -1, the other size +1, which leads to lowest weighted lost.
-                hypothesis1 = np.vectorize(lambda val: binary_class_label[0] if val > split_point else binary_class_label[1])
-                hypothesis2 = np.vectorize(lambda val: binary_class_label[1] if val > split_point else binary_class_label[0])
+                # or classifies one side -1, the other size +1, which leads to lowest weighted error.
+                hypothesis1 = np.vectorize(lambda val: binary_class_label[0] if val >= split_point else binary_class_label[1])
+                hypothesis2 = np.vectorize(lambda val: binary_class_label[1] if val >= split_point else binary_class_label[0])
 
                 y_pred1 = hypothesis1(x)
                 y_pred2 = hypothesis2(x)
@@ -68,14 +68,14 @@ class ShallowDecisionTree:
     def hypothesis(self, X):
         x = X[:, self.param['feature_index']]
         the_other_label = list(set(self.y) - set([self.param['label']]))[0]
-        return np.vectorize(lambda val: self.param['label'] if val > self.param['split_point'] else the_other_label)(x)
+        return np.vectorize(lambda val: self.param['label'] if val >= self.param['split_point'] else the_other_label)(x)
 
     def __str__(self):
         the_other_label = list(set(self.y) - set([self.param['label']]))[0]
 
         description = \
-        '[*] Label {} if value at {}-th feature is greater than {}. \n' + \
-        '[*] Label {} if value at {}-th feature is less or equal to {}.'
+        ' -  Label {} if value at {}-th feature is >= {}. \n' + \
+        ' -  Label {} if value at {}-th feature is < {}.'
 
         return description.format(self.param['label'],
                                   self.param['feature_index'],

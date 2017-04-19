@@ -5,7 +5,7 @@ import numpy as np
 from utils import zero_one_loss
 
 class SVM:
-    def __init__(self, data, param={}, enable_heuristic=False, enable_kernel_cache=True, max_iteration=20000, verbose=False):
+    def __init__(self, data, param={}, scorer=zero_one_loss, enable_heuristic=False, enable_kernel_cache=True, max_iteration=3000, verbose=False):
         """ Binary SVM Classifer optimized with SMO algorithm
 
             Implementation Reference:
@@ -29,9 +29,8 @@ class SVM:
 
             @param `enable_heuristic`: Whether use Platts heuristics to train SVM. (Defualt: False)
             @param `enable_kernel_cache`: Whether precompute kernel results. This can speed up training but need time to initialize when data is large. (Defualt: True)
-            @param `max_iteration`: Max iteration for SMO training algorithm to avoid not converging. (Default: 20000)
+            @param `max_iteration`: Max iteration for SMO training algorithm to avoid not converging. (Default: 5000)
         """
-
         # Upack training and test data
         self.train_X = data['train_X']
         self.train_y = data['train_y']
@@ -45,9 +44,7 @@ class SVM:
         self.poly_degree = param.get('poly_degree', 3)
         self.rbf_sigma = param.get('rbf_sigma', 0.5)
 
-        # self.enable_heuristic = param.get('enable_heuristic', False)
-        # self.enable_kernel_cache = param.get('enable_kernel_cache', True)
-        # self.max_iteration = param.get('max_iteration', 20000)
+        self.scorer = scorer
         self.enable_heuristic = enable_heuristic
         self.enable_kernel_cache = enable_kernel_cache
         self.max_iteration = max_iteration
@@ -69,9 +66,16 @@ class SVM:
 
         # Model parameters
         self.use_w = True if self.kernel_type == 'linear' else False # If linear kernel is used, use weight to perform prediction instead of alphas.
-        self.w = np.zeros(self.train_X.shape[1]) # Weight vector: shape(D,)
-        self.b = 0.0 # Bias term: scalar
+        self.w = np.zeros(self.train_X.shape[1]) # Weight vector: shape(D,) this will be updated when training.
+        self.b = 0.0 # Bias term: scalar, this will be updated when training.
         self.alpha = np.zeros(len(self.train_X)) # Lagrange multipliers
+
+        # After training, we can compute biases for support vectors (training examples which 0 < alpha < C)
+        # for estimating sample mean and sample std of biases.
+        # For a good learning result, sample std of biases should be small.
+        self.postcomputed_biases = np.array([None]*len(self.train_X))
+        self.b_mean = None # Instead of using self.b to make prediction, use self.b_mean when training is done.
+        self.b_std = None
 
     def train(self, info=''):
         """ Optimize alpha with either simple SMO algorithm or simple SMO combined with Platt's heuristics
@@ -113,17 +117,20 @@ class SVM:
             iteration += 1
             if self.verbose and (iteration == 1 or iteration % 100 == 0 or iteration == self.max_iteration):
                 # Compute training and testing error
-                train_error = zero_one_loss(y_truth=self.train_y, y_pred=self.hypothesis(X=self.train_X))
-                test_error = zero_one_loss(y_truth=self.test_y, y_pred=self.hypothesis(X=self.test_X))
+                train_error = self.scorer(y_truth=self.train_y, y_pred=self.hypothesis(X=self.train_X))
+                test_error = self.scorer(y_truth=self.test_y, y_pred=self.hypothesis(X=self.test_X))
                 print('-'*100)
                 if info: print('[*] {}'.format(info))
                 print('[*] {} alphas changed.'.format(num_changed_alphas))
                 print('[*] Iteration: {} | Train error: {} | Test error: {}'.format(iteration, train_error, test_error))
 
-            if self.verbose and iteration == self.max_iteration:
+            if iteration == self.max_iteration:
                 print('-'*100)
                 print('[*] Max iteration acheived.')
-                return
+                break
+
+        if self.verbose: print('[*] Averaging post-computed biases as final bias of SVM hypothesis.')
+        self._postcompute_biases()
 
     def _heuristic_smo(self, info=''):
 
@@ -179,17 +186,20 @@ class SVM:
             iteration += 1
             if self.verbose and (iteration == 1 or iteration % 100 == 0 or iteration == self.max_iteration):
                 # Compute training and testing error
-                train_error = zero_one_loss(y_truth=self.train_y, y_pred=self.hypothesis(X=self.train_X))
-                test_error = zero_one_loss(y_truth=self.test_y, y_pred=self.hypothesis(X=self.test_X))
+                train_error = self.scorer(y_truth=self.train_y, y_pred=self.hypothesis(X=self.train_X))
+                test_error = self.scorer(y_truth=self.test_y, y_pred=self.hypothesis(X=self.test_X))
                 print('-'*100)
                 if info: print('[*] {}'.format(info))
                 print('[*] {} alphas changed.'.format(num_changed_alphas))
                 print('[*] Iteration: {} | Train error: {} | Test error: {}'.format(iteration, train_error, test_error))
 
-            if self.verbose and iteration == self.max_iteration:
+            if iteration == self.max_iteration:
                 print('-'*100)
                 print('[*] Max iteration acheived.')
-                return
+                break
+
+            if self.verbose: print('[*] Averaging post-computed biases as final bias of SVM hypothesis.')
+            self._postcompute_biases()
 
     def _violate_KKT_conditions(self, i):
         """ Check if an example violates the KKT conditons """
@@ -291,19 +301,22 @@ class SVM:
         return 1
 
     def _f(self, X):
-        """ Linear classifier `f(x)`, used when training or making predictions.
+        """ Linear classifier `f(x) = wx + b`, used when training or making predictions.
             @param `X`: `X` can be a single example with shape(D,) or multiple examples with shape(N, D)
         """
+        # Use b_mean to make predictions when training is done.
+        b = self.b_mean if self.b_mean is not None else self.b
+
         if self.use_w:
             # Speed up by using computed weight only when linear kernel is used.
-            return np.dot(X, self.w) + self.b
+            return np.dot(X, self.w) + b
         else:
             # If X is single example
             if X.ndim == 1:
-                return np.dot(self.alpha*self.train_y, self.kernel(self.train_X, X)) + self.b
+                return np.dot(self.alpha*self.train_y, self.kernel(self.train_X, X)) + b
             # Multiple examples
             elif X.ndim == 2:
-                return np.array([np.dot(self.alpha*self.train_y, self.kernel(self.train_X, _X)) + self.b for _X in X])
+                return np.array([np.dot(self.alpha*self.train_y, self.kernel(self.train_X, _X)) + b for _X in X])
 
     def _E(self, i):
         """ Prediction error: _f(x_i) - y_i, used when training. """
@@ -321,6 +334,25 @@ class SVM:
             for j, x_j in enumerate(self.train_X):
                 kernel_cache[i][j] = self.kernel(x_i, x_j)
         return kernel_cache
+
+    def _postcompute_biases(self):
+        """ Post-computed biases for non-boundary training examples (support vectors) when training is done.
+            This is for estimating sample mean and sample std of biases.
+            For a good learning result, sample std of biases should be small.
+        """
+        def _b(i):
+            if self.enable_kernel_cache:
+                return self.train_y[i] - np.dot(self.alpha*self.train_y, self.kernel_cache[i])
+            else:
+                return self.train_y[i] - self._f(self.train_X[i])
+
+        I_non_boundary = np.where(np.logical_and(self.alpha > 0, self.alpha < self.C) == True)[0].tolist()
+
+        if len(I_non_boundary):
+            biases = np.vectorize(_b)(I_non_boundary)
+            self.b_mean = np.mean(biases)
+            self.b_std = np.sqrt(np.sum((biases - self.b_mean)**2) / (len(biases) - 1))
+            self.postcomputed_biases[I_non_boundary] = biases
 
     def _linear_kernel(self, X, x):
         """ Linear kernel:

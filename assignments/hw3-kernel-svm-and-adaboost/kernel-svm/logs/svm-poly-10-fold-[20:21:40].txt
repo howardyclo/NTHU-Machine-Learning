@@ -1,0 +1,46 @@
+----------------------------------------------------------------------------------------------------
+[*] Class label mapping:
+ -  4 => +1
+ -  21 => -1
+----------------------------------------------------------------------------------------------------
+[*] Cross validation history:
+ -  Parameter: {'kernel_type': 'poly', 'C': 1.0, 'poly_degree': 2} | Cross validation error: 0.00519480519481
+ -  Parameter: {'kernel_type': 'poly', 'C': 0.28, 'poly_degree': 2} | Cross validation error: 0.00556586270872
+ -  Parameter: {'kernel_type': 'poly', 'C': 0.64, 'poly_degree': 2} | Cross validation error: 0.00575139146568
+ -  Parameter: {'kernel_type': 'poly', 'C': 0.1, 'poly_degree': 2} | Cross validation error: 0.00575139146568
+ -  Parameter: {'kernel_type': 'poly', 'C': 1.0, 'poly_degree': 3} | Cross validation error: 0.00593692022263
+ -  Parameter: {'kernel_type': 'poly', 'C': 0.64, 'poly_degree': 3} | Cross validation error: 0.00612244897959
+ -  Parameter: {'kernel_type': 'poly', 'C': 0.82, 'poly_degree': 2} | Cross validation error: 0.00612244897959
+ -  Parameter: {'kernel_type': 'poly', 'C': 0.82, 'poly_degree': 3} | Cross validation error: 0.00612244897959
+ -  Parameter: {'kernel_type': 'poly', 'C': 0.46, 'poly_degree': 2} | Cross validation error: 0.00630797773655
+ -  Parameter: {'kernel_type': 'poly', 'C': 0.46, 'poly_degree': 3} | Cross validation error: 0.00649350649351
+ -  Parameter: {'kernel_type': 'poly', 'C': 0.46, 'poly_degree': 4} | Cross validation error: 0.00686456400742
+ -  Parameter: {'kernel_type': 'poly', 'C': 0.1, 'poly_degree': 3} | Cross validation error: 0.00686456400742
+ -  Parameter: {'kernel_type': 'poly', 'C': 0.28, 'poly_degree': 3} | Cross validation error: 0.00742115027829
+ -  Parameter: {'kernel_type': 'poly', 'C': 0.28, 'poly_degree': 5} | Cross validation error: 0.00742115027829
+ -  Parameter: {'kernel_type': 'poly', 'C': 0.82, 'poly_degree': 4} | Cross validation error: 0.00760667903525
+ -  Parameter: {'kernel_type': 'poly', 'C': 0.82, 'poly_degree': 5} | Cross validation error: 0.00760667903525
+ -  Parameter: {'kernel_type': 'poly', 'C': 0.28, 'poly_degree': 4} | Cross validation error: 0.00760667903525
+ -  Parameter: {'kernel_type': 'poly', 'C': 0.46, 'poly_degree': 5} | Cross validation error: 0.00760667903525
+ -  Parameter: {'kernel_type': 'poly', 'C': 0.1, 'poly_degree': 4} | Cross validation error: 0.00779220779221
+ -  Parameter: {'kernel_type': 'poly', 'C': 0.64, 'poly_degree': 4} | Cross validation error: 0.00779220779221
+ -  Parameter: {'kernel_type': 'poly', 'C': 0.64, 'poly_degree': 5} | Cross validation error: 0.00779220779221
+ -  Parameter: {'kernel_type': 'poly', 'C': 1.0, 'poly_degree': 4} | Cross validation error: 0.00779220779221
+ -  Parameter: {'kernel_type': 'poly', 'C': 0.1, 'poly_degree': 5} | Cross validation error: 0.00779220779221
+ -  Parameter: {'kernel_type': 'poly', 'C': 1.0, 'poly_degree': 5} | Cross validation error: 0.00797773654917
+----------------------------------------------------------------------------------------------------
+[*] Best parameter: {'kernel_type': 'poly', 'C': 1.0, 'poly_degree': 2}
+[*] Best cross validation error: 0.00519480519481
+[*] Start to train on full training data and evaluate on test data ...
+----------------------------------------------------------------------------------------------------
+[*] Train file path: "dataset/alphabet_DU_training.csv"
+[*] Test file path: "dataset/alphabet_DU_testing.csv"
+[*] Datetime: 22:29:02
+[*] Best parameter: {'kernel_type': 'poly', 'C': 1.0, 'poly_degree': 2}
+[*] Sample mean of bias: 1.59885084997
+[*] Sample std of bias: 0.297562534776
+[*] Performance: Train error: 0.0 | Test error: 0.00556586270872
+----------------------------------------------------------------------------------------------------
+[*] Saving SVM hypothesis to "hypothesis/SVM_hypothesis_header-[22:29:02].csv" ...
+[*] Output SVM hypothesis to "hypothesis/SVM_hypothesis_header-[22:29:02].csv" success.
+----------------------------------------------------------------------------------------------------

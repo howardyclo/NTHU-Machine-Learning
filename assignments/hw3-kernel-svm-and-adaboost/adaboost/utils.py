@@ -7,29 +7,32 @@ def normalize_binary_class_label(y):
     """ Normalize class label to {1, +1} if classes are different (e.g. {0, 1}, {'+', '-'}...) """
 
     binary_class_label = set(y)
-    if binary_class_label == {1, -1}: return y
-    if binary_class_label == {1, 0}: return np.vectorize(lambda y: 1 if y == 1 else -1)(y)
-    if binary_class_label == {1, 2}: return np.vectorize(lambda y: 1 if y == 1 else -1)(y)
-    if binary_class_label == {'+', '-'}: return np.vectorize(lambda y: 1 if y == '+' else -1 )(y)
     return np.vectorize(lambda y: 1 if y == list(binary_class_label)[0] else -1 )(y)
 
-def load_dataset(train_file_path='dataset/messidor_features_training.csv', test_file_path='dataset/messidor_features_testing.csv'):
+def load_dataset(train_filepath, test_filepath):
     """ Load training, test dataset only in csv """
 
-    train_data = np.genfromtxt(train_file_path, delimiter=',')
+    train_data = np.genfromtxt(train_filepath, delimiter=',')
     train_X = train_data[:,1:]
     train_y = train_data[:,0]
 
-    test_data = np.genfromtxt(test_file_path, delimiter=',')
+    test_data = np.genfromtxt(test_filepath, delimiter=',')
     test_X = test_data[:,1:]
     test_y = test_data[:,0]
 
-    train_test_y = train_y.tolist() + test_y.tolist() # concatenate
-    train_test_y = normalize_binary_class_label(train_test_y) # normalize binary label to {+1, -1}
+    unnormalized_train_test_y = train_y.tolist() + test_y.tolist() # concatenate
+    train_test_y = normalize_binary_class_label(unnormalized_train_test_y) # normalize binary label to {+1, -1}
     train_y = train_test_y[:len(train_y)] # split to train_y
     test_y = train_test_y[len(train_y):] # split to test_y
 
-    return { 'train_X': train_X, 'train_y': train_y, 'test_X': test_X, 'test_y': test_y }
+    # save the label mapping
+    binary_class_label = list(set(unnormalized_train_test_y))
+    if type(binary_class_label[0]) == float:
+        binary_class_label[0] = int(binary_class_label[0])
+        binary_class_label[1] = int(binary_class_label[1])
+
+    return { 'train_X': train_X, 'train_y': train_y, 'test_X': test_X, 'test_y': test_y,
+    '+1': binary_class_label[0], '-1': binary_class_label[1] }
 
 def print_and_write(filename='log.txt', log=''):
     print(log)
@@ -111,7 +114,7 @@ class GridSearchCV:
         self.best_score = 0.0
 
     def train(self):
-        # Find the best hyper-parameters by K-fold cross-validation.
+        """ Find the best hyper-parameters with K-fold cross-validation. """
         for param in self.params:
             score = K_fold_cross_validation(data=self.data,
                                             model=self.model,

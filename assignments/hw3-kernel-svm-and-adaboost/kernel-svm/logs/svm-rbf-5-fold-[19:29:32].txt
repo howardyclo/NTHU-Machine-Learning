@@ -1,0 +1,46 @@
+----------------------------------------------------------------------------------------------------
+[*] Class label mapping:
+ -  4 => +1
+ -  21 => -1
+----------------------------------------------------------------------------------------------------
+[*] Cross validation history:
+ -  Parameter: {'kernel_type': 'rbf', 'C': 0.82, 'rbf_sigma': 2.0} | Cross validation error: 0.000371057513915
+ -  Parameter: {'kernel_type': 'rbf', 'C': 1.0, 'rbf_sigma': 2.0} | Cross validation error: 0.000371057513915
+ -  Parameter: {'kernel_type': 'rbf', 'C': 0.64, 'rbf_sigma': 2.0} | Cross validation error: 0.000742115027829
+ -  Parameter: {'kernel_type': 'rbf', 'C': 0.46, 'rbf_sigma': 2.0} | Cross validation error: 0.00185528756957
+ -  Parameter: {'kernel_type': 'rbf', 'C': 0.28, 'rbf_sigma': 2.0} | Cross validation error: 0.00445269016698
+ -  Parameter: {'kernel_type': 'rbf', 'C': 1.0, 'rbf_sigma': 1.37} | Cross validation error: 0.0107606679035
+ -  Parameter: {'kernel_type': 'rbf', 'C': 0.82, 'rbf_sigma': 1.37} | Cross validation error: 0.0144712430427
+ -  Parameter: {'kernel_type': 'rbf', 'C': 0.64, 'rbf_sigma': 1.37} | Cross validation error: 0.0200371057514
+ -  Parameter: {'kernel_type': 'rbf', 'C': 0.1, 'rbf_sigma': 2.0} | Cross validation error: 0.0222634508349
+ -  Parameter: {'kernel_type': 'rbf', 'C': 0.46, 'rbf_sigma': 1.37} | Cross validation error: 0.0352504638219
+ -  Parameter: {'kernel_type': 'rbf', 'C': 0.28, 'rbf_sigma': 1.37} | Cross validation error: 0.0504638218924
+ -  Parameter: {'kernel_type': 'rbf', 'C': 1.0, 'rbf_sigma': 0.73} | Cross validation error: 0.219294990724
+ -  Parameter: {'kernel_type': 'rbf', 'C': 0.1, 'rbf_sigma': 1.37} | Cross validation error: 0.312059369202
+ -  Parameter: {'kernel_type': 'rbf', 'C': 0.82, 'rbf_sigma': 0.73} | Cross validation error: 0.320964749536
+ -  Parameter: {'kernel_type': 'rbf', 'C': 0.64, 'rbf_sigma': 0.73} | Cross validation error: 0.373283858998
+ -  Parameter: {'kernel_type': 'rbf', 'C': 0.46, 'rbf_sigma': 0.73} | Cross validation error: 0.414842300557
+ -  Parameter: {'kernel_type': 'rbf', 'C': 0.28, 'rbf_sigma': 0.73} | Cross validation error: 0.467532467532
+ -  Parameter: {'kernel_type': 'rbf', 'C': 0.64, 'rbf_sigma': 0.1} | Cross validation error: 0.474211502783
+ -  Parameter: {'kernel_type': 'rbf', 'C': 0.82, 'rbf_sigma': 0.1} | Cross validation error: 0.474211502783
+ -  Parameter: {'kernel_type': 'rbf', 'C': 1.0, 'rbf_sigma': 0.1} | Cross validation error: 0.474211502783
+ -  Parameter: {'kernel_type': 'rbf', 'C': 0.46, 'rbf_sigma': 0.1} | Cross validation error: 0.481261595547
+ -  Parameter: {'kernel_type': 'rbf', 'C': 0.28, 'rbf_sigma': 0.1} | Cross validation error: 0.496103896104
+ -  Parameter: {'kernel_type': 'rbf', 'C': 0.1, 'rbf_sigma': 0.1} | Cross validation error: 0.498330241187
+ -  Parameter: {'kernel_type': 'rbf', 'C': 0.1, 'rbf_sigma': 0.73} | Cross validation error: 0.498330241187
+----------------------------------------------------------------------------------------------------
+[*] Best parameter: {'kernel_type': 'rbf', 'C': 0.82, 'rbf_sigma': 2.0}
+[*] Best cross validation error: 0.000371057513915
+[*] Start to train on full training data and evaluate on test data ...
+----------------------------------------------------------------------------------------------------
+[*] Train file path: "dataset/alphabet_DU_training.csv"
+[*] Test file path: "dataset/alphabet_DU_testing.csv"
+[*] Datetime: 19:48:37
+[*] Best parameter: {'kernel_type': 'rbf', 'C': 0.82, 'rbf_sigma': 2.0}
+[*] Sample mean of bias: -0.0275926944718
+[*] Sample std of bias: 0.00373108715594
+[*] Performance: Train error: 0.0 | Test error: 0.0
+----------------------------------------------------------------------------------------------------
+[*] Saving SVM hypothesis to "hypothesis/SVM_hypothesis_header-[19:48:37].csv" ...
+[*] Output SVM hypothesis to "hypothesis/SVM_hypothesis_header-[19:48:37].csv" success.
+----------------------------------------------------------------------------------------------------

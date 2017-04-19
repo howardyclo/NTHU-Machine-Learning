@@ -80,7 +80,8 @@ if __name__ == '__main__':
     print('-'*100)
 
     # Generate our good hypothesis to approximate unknown target concept from sample size m
-    m = int(math.ceil((4/eps) * math.log(4/delta)))
+    # m = int(math.ceil((4/eps) * math.log(4/delta)))
+    m = 50
     X_m = np.random.multivariate_normal(mean=mean, cov=cov, size=m)
     print('[*] Generating hypothesis from sample size m = {}...'.format(m))
     R_hypothesis = generate_hypothesis_rectangle(X_m, R_target)
