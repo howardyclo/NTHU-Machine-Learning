@@ -199,7 +199,7 @@ class SVM:
                 break
 
         if self.verbose: print('[*] Averaging post-computed biases as final bias of SVM hypothesis.')
-            self._postcompute_biases()
+        self._postcompute_biases()
 
     def _violate_KKT_conditions(self, i):
         """ Check if an example violates the KKT conditons """
