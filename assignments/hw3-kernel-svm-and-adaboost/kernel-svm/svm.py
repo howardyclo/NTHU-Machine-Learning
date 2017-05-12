@@ -198,7 +198,7 @@ class SVM:
                 print('[*] Max iteration acheived.')
                 break
 
-            if self.verbose: print('[*] Averaging post-computed biases as final bias of SVM hypothesis.')
+        if self.verbose: print('[*] Averaging post-computed biases as final bias of SVM hypothesis.')
             self._postcompute_biases()
 
     def _violate_KKT_conditions(self, i):
