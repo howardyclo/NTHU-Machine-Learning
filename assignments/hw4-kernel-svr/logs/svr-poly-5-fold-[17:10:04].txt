@@ -36,9 +36,9 @@
 [*] Test file path: "dataset/airfoil_self_noise_testing.csv"
 [*] Datetime: 19:02:58
 [*] Best parameter: {'C': 1e-07, 'kernel_type': 'poly', 'tol': 0.01, 'epsilon': 0.1, 'poly_degree': 2}
-[*] Sample mean of bias: 144.36526795788149
-[*] Sample std of bias: 28.309240925906586
-[*] Performance: Train error: 15.311929891470916 | Test error: 15.235677730149435
+[*] Sample mean of bias: 128.653934387
+[*] Sample std of bias: 4.34025587068
+[*] Performance: Train error: 3.91426335831 | Test error: 3.83562189503
 ----------------------------------------------------------------------------------------------------
 [*] Saving SVR hypothesis to "hypothesis/SVR_hypothesis_header-[19:02:58].csv" ...
 [*] Output SVR hypothesis to "hypothesis/SVR_hypothesis_header-[19:02:58].csv" success.

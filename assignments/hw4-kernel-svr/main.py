@@ -23,7 +23,7 @@ parser.add_argument('--poly_degree', dest='poly_degree', type=int, default=3, he
 parser.add_argument('--rbf_sigma', dest='rbf_sigma', type=float, default=0.5, help='Sigma term in RBF (guassian). Ignored by all other kernels. (Default: 0.5)')
 parser.add_argument('--enable_heuristic', dest='enable_heuristic', action='store_true', default=False, help='Whether use Platts heuristics to train SVR. (Defualt: False)')
 parser.add_argument('--enable_kernel_cache', dest='enable_kernel_cache', action='store_true', default=True, help='Whether precompute kernel results. This can speed up training but need time to initialize when data is large. (Defualt: True)')
-parser.add_argument('--max_iteration', dest='max_iteration', type=int, default=5000, help='Max iteration for SMO training algorithm to avoid not converging. (Defualt: 5000)')
+parser.add_argument('--max_iteration', dest='max_iteration', type=int, default=3000, help='Max iteration for SMO training algorithm to avoid not converging. (Defualt: 3000)')
 
 args = parser.parse_args()
 
@@ -67,13 +67,13 @@ if __name__ == '__main__':
 
         # Specify list of hyper-parameters for grid search K-fold cross validation.
         param_grid = {
-            'C': [1e-15, 1e-9, 1e-7, 1e-3, 1e-1, 0.325, 0.55, 0.775, 1.0],
+            'C': [1e-15, 1e-9, 1e-7, 1e-3, 1e-1],
             'kernel_type': [args.kernel_type],
             'tol': [args.tol],
             'epsilon': [args.epsilon]
         }
         if args.kernel_type == 'poly':
-            param_grid['poly_degree'] = [2, 3, 4]
+            param_grid['poly_degree'] = [2, 3]
         elif args.kernel_type == 'rbf':
             param_grid['rbf_sigma'] = np.linspace(0.1, 2.0, 4).round(2).tolist()
 
