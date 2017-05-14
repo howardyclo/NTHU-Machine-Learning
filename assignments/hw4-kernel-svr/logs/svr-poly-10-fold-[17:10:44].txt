@@ -1,0 +1,45 @@
+----------------------------------------------------------------------------------------------------
+[*] Cross validation history:
+ -  Parameter: {'C': 1e-15, 'kernel_type': 'poly', 'tol': 0.01, 'epsilon': 0.1, 'poly_degree': 2} | Cross validation error: 5.004778011952809
+ -  Parameter: {'C': 1e-07, 'kernel_type': 'poly', 'tol': 0.01, 'epsilon': 0.1, 'poly_degree': 2} | Cross validation error: 5.219847722896295
+ -  Parameter: {'C': 1e-09, 'kernel_type': 'poly', 'tol': 0.01, 'epsilon': 0.1, 'poly_degree': 2} | Cross validation error: 5.409827405831459
+ -  Parameter: {'C': 1e-15, 'kernel_type': 'poly', 'tol': 0.01, 'epsilon': 0.1, 'poly_degree': 3} | Cross validation error: 10.703879923264589
+ -  Parameter: {'C': 0.1, 'kernel_type': 'poly', 'tol': 0.01, 'epsilon': 0.1, 'poly_degree': 2} | Cross validation error: 102.85182533071645
+ -  Parameter: {'C': 1.0, 'kernel_type': 'poly', 'tol': 0.01, 'epsilon': 0.1, 'poly_degree': 2} | Cross validation error: 190.64852324384535
+ -  Parameter: {'C': 0.001, 'kernel_type': 'poly', 'tol': 0.01, 'epsilon': 0.1, 'poly_degree': 2} | Cross validation error: 256.9979346121248
+ -  Parameter: {'C': 0.325, 'kernel_type': 'poly', 'tol': 0.01, 'epsilon': 0.1, 'poly_degree': 2} | Cross validation error: 616.500450118744
+ -  Parameter: {'C': 0.55, 'kernel_type': 'poly', 'tol': 0.01, 'epsilon': 0.1, 'poly_degree': 2} | Cross validation error: 738.679059217138
+ -  Parameter: {'C': 0.775, 'kernel_type': 'poly', 'tol': 0.01, 'epsilon': 0.1, 'poly_degree': 2} | Cross validation error: 836.637958895523
+ -  Parameter: {'C': 0.325, 'kernel_type': 'poly', 'tol': 0.01, 'epsilon': 0.1, 'poly_degree': 3} | Cross validation error: 2598.899569601758
+ -  Parameter: {'C': 0.55, 'kernel_type': 'poly', 'tol': 0.01, 'epsilon': 0.1, 'poly_degree': 3} | Cross validation error: 4623.116217053512
+ -  Parameter: {'C': 1e-07, 'kernel_type': 'poly', 'tol': 0.01, 'epsilon': 0.1, 'poly_degree': 3} | Cross validation error: 8648.565172829385
+ -  Parameter: {'C': 1e-09, 'kernel_type': 'poly', 'tol': 0.01, 'epsilon': 0.1, 'poly_degree': 3} | Cross validation error: 9505.246767941524
+ -  Parameter: {'C': 0.001, 'kernel_type': 'poly', 'tol': 0.01, 'epsilon': 0.1, 'poly_degree': 3} | Cross validation error: 9733.480327643321
+ -  Parameter: {'C': 1.0, 'kernel_type': 'poly', 'tol': 0.01, 'epsilon': 0.1, 'poly_degree': 3} | Cross validation error: 11633.104896096474
+ -  Parameter: {'C': 0.775, 'kernel_type': 'poly', 'tol': 0.01, 'epsilon': 0.1, 'poly_degree': 3} | Cross validation error: 17042.626122775488
+ -  Parameter: {'C': 0.1, 'kernel_type': 'poly', 'tol': 0.01, 'epsilon': 0.1, 'poly_degree': 3} | Cross validation error: 47426.74310842754
+ -  Parameter: {'C': 1e-15, 'kernel_type': 'poly', 'tol': 0.01, 'epsilon': 0.1, 'poly_degree': 4} | Cross validation error: 97466.30239507434
+ -  Parameter: {'C': 0.55, 'kernel_type': 'poly', 'tol': 0.01, 'epsilon': 0.1, 'poly_degree': 4} | Cross validation error: 145653.59767021472
+ -  Parameter: {'C': 0.1, 'kernel_type': 'poly', 'tol': 0.01, 'epsilon': 0.1, 'poly_degree': 4} | Cross validation error: 170723.9413741658
+ -  Parameter: {'C': 0.001, 'kernel_type': 'poly', 'tol': 0.01, 'epsilon': 0.1, 'poly_degree': 4} | Cross validation error: 368687.73010776227
+ -  Parameter: {'C': 1e-09, 'kernel_type': 'poly', 'tol': 0.01, 'epsilon': 0.1, 'poly_degree': 4} | Cross validation error: 522004.04986061575
+ -  Parameter: {'C': 0.325, 'kernel_type': 'poly', 'tol': 0.01, 'epsilon': 0.1, 'poly_degree': 4} | Cross validation error: 656489.7405923402
+ -  Parameter: {'C': 1.0, 'kernel_type': 'poly', 'tol': 0.01, 'epsilon': 0.1, 'poly_degree': 4} | Cross validation error: 851817.1027400906
+ -  Parameter: {'C': 1e-07, 'kernel_type': 'poly', 'tol': 0.01, 'epsilon': 0.1, 'poly_degree': 4} | Cross validation error: 1600530.0326897618
+ -  Parameter: {'C': 0.775, 'kernel_type': 'poly', 'tol': 0.01, 'epsilon': 0.1, 'poly_degree': 4} | Cross validation error: 1844878.0908431686
+----------------------------------------------------------------------------------------------------
+[*] Best parameter: {'C': 1e-15, 'kernel_type': 'poly', 'tol': 0.01, 'epsilon': 0.1, 'poly_degree': 2}
+[*] Best cross validation error: 5.004778011952809
+[*] Start to train on full training data and evaluate on test data ...
+----------------------------------------------------------------------------------------------------
+[*] Train file path: "dataset/airfoil_self_noise_training.csv"
+[*] Test file path: "dataset/airfoil_self_noise_testing.csv"
+[*] Datetime: 21:11:10
+[*] Best parameter: {'C': 1e-15, 'kernel_type': 'poly', 'tol': 0.01, 'epsilon': 0.1, 'poly_degree': 2}
+[*] Sample mean of bias: 126.45749975292044
+[*] Sample std of bias: 0.09288050295629784
+[*] Performance: Train error: 5.293419748957678 | Test error: 5.000224345074642
+----------------------------------------------------------------------------------------------------
+[*] Saving SVR hypothesis to "hypothesis/SVR_hypothesis_header-[21:11:10].csv" ...
+[*] Output SVR hypothesis to "hypothesis/SVR_hypothesis_header-[21:11:10].csv" success.
+----------------------------------------------------------------------------------------------------

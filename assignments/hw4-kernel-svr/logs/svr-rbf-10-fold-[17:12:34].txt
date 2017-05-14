@@ -1,0 +1,54 @@
+----------------------------------------------------------------------------------------------------
+[*] Cross validation history:
+ -  Parameter: {'C': 1.0, 'kernel_type': 'rbf', 'tol': 0.01, 'epsilon': 0.1, 'rbf_sigma': 2.0} | Cross validation error: 4.950659002649907
+ -  Parameter: {'C': 0.775, 'kernel_type': 'rbf', 'tol': 0.01, 'epsilon': 0.1, 'rbf_sigma': 2.0} | Cross validation error: 4.984282713437532
+ -  Parameter: {'C': 0.55, 'kernel_type': 'rbf', 'tol': 0.01, 'epsilon': 0.1, 'rbf_sigma': 2.0} | Cross validation error: 5.036214570302244
+ -  Parameter: {'C': 1.0, 'kernel_type': 'rbf', 'tol': 0.01, 'epsilon': 0.1, 'rbf_sigma': 1.37} | Cross validation error: 5.067141532271036
+ -  Parameter: {'C': 0.775, 'kernel_type': 'rbf', 'tol': 0.01, 'epsilon': 0.1, 'rbf_sigma': 1.37} | Cross validation error: 5.090365230664725
+ -  Parameter: {'C': 0.325, 'kernel_type': 'rbf', 'tol': 0.01, 'epsilon': 0.1, 'rbf_sigma': 2.0} | Cross validation error: 5.115746769568908
+ -  Parameter: {'C': 0.55, 'kernel_type': 'rbf', 'tol': 0.01, 'epsilon': 0.1, 'rbf_sigma': 1.37} | Cross validation error: 5.1272146435685
+ -  Parameter: {'C': 0.325, 'kernel_type': 'rbf', 'tol': 0.01, 'epsilon': 0.1, 'rbf_sigma': 1.37} | Cross validation error: 5.179889817626028
+ -  Parameter: {'C': 1.0, 'kernel_type': 'rbf', 'tol': 0.01, 'epsilon': 0.1, 'rbf_sigma': 0.1} | Cross validation error: 5.188160726813446
+ -  Parameter: {'C': 0.775, 'kernel_type': 'rbf', 'tol': 0.01, 'epsilon': 0.1, 'rbf_sigma': 0.1} | Cross validation error: 5.209781106589977
+ -  Parameter: {'C': 0.775, 'kernel_type': 'rbf', 'tol': 0.01, 'epsilon': 0.1, 'rbf_sigma': 0.73} | Cross validation error: 5.224577569730061
+ -  Parameter: {'C': 1.0, 'kernel_type': 'rbf', 'tol': 0.01, 'epsilon': 0.1, 'rbf_sigma': 0.73} | Cross validation error: 5.225327337546125
+ -  Parameter: {'C': 0.1, 'kernel_type': 'rbf', 'tol': 0.01, 'epsilon': 0.1, 'rbf_sigma': 2.0} | Cross validation error: 5.2299511091137685
+ -  Parameter: {'C': 0.55, 'kernel_type': 'rbf', 'tol': 0.01, 'epsilon': 0.1, 'rbf_sigma': 0.73} | Cross validation error: 5.233108589245608
+ -  Parameter: {'C': 0.55, 'kernel_type': 'rbf', 'tol': 0.01, 'epsilon': 0.1, 'rbf_sigma': 0.1} | Cross validation error: 5.233961190614357
+ -  Parameter: {'C': 0.325, 'kernel_type': 'rbf', 'tol': 0.01, 'epsilon': 0.1, 'rbf_sigma': 0.73} | Cross validation error: 5.250778114497778
+ -  Parameter: {'C': 0.1, 'kernel_type': 'rbf', 'tol': 0.01, 'epsilon': 0.1, 'rbf_sigma': 1.37} | Cross validation error: 5.254326811440324
+ -  Parameter: {'C': 0.325, 'kernel_type': 'rbf', 'tol': 0.01, 'epsilon': 0.1, 'rbf_sigma': 0.1} | Cross validation error: 5.258446959889744
+ -  Parameter: {'C': 0.1, 'kernel_type': 'rbf', 'tol': 0.01, 'epsilon': 0.1, 'rbf_sigma': 0.73} | Cross validation error: 5.279741112279656
+ -  Parameter: {'C': 0.1, 'kernel_type': 'rbf', 'tol': 0.01, 'epsilon': 0.1, 'rbf_sigma': 0.1} | Cross validation error: 5.2845025693344905
+ -  Parameter: {'C': 0.001, 'kernel_type': 'rbf', 'tol': 0.01, 'epsilon': 0.1, 'rbf_sigma': 2.0} | Cross validation error: 5.295836423537563
+ -  Parameter: {'C': 0.001, 'kernel_type': 'rbf', 'tol': 0.01, 'epsilon': 0.1, 'rbf_sigma': 1.37} | Cross validation error: 5.2961954840140475
+ -  Parameter: {'C': 1e-09, 'kernel_type': 'rbf', 'tol': 0.01, 'epsilon': 0.1, 'rbf_sigma': 0.73} | Cross validation error: 5.296449700422713
+ -  Parameter: {'C': 0.001, 'kernel_type': 'rbf', 'tol': 0.01, 'epsilon': 0.1, 'rbf_sigma': 0.73} | Cross validation error: 5.296493075577964
+ -  Parameter: {'C': 1e-07, 'kernel_type': 'rbf', 'tol': 0.01, 'epsilon': 0.1, 'rbf_sigma': 0.1} | Cross validation error: 5.296521245614848
+ -  Parameter: {'C': 1e-07, 'kernel_type': 'rbf', 'tol': 0.01, 'epsilon': 0.1, 'rbf_sigma': 1.37} | Cross validation error: 5.2965352841775495
+ -  Parameter: {'C': 1e-09, 'kernel_type': 'rbf', 'tol': 0.01, 'epsilon': 0.1, 'rbf_sigma': 0.1} | Cross validation error: 5.29653682622567
+ -  Parameter: {'C': 1e-15, 'kernel_type': 'rbf', 'tol': 0.01, 'epsilon': 0.1, 'rbf_sigma': 2.0} | Cross validation error: 5.2965678642714575
+ -  Parameter: {'C': 1e-15, 'kernel_type': 'rbf', 'tol': 0.01, 'epsilon': 0.1, 'rbf_sigma': 0.73} | Cross validation error: 5.296695808383234
+ -  Parameter: {'C': 0.001, 'kernel_type': 'rbf', 'tol': 0.01, 'epsilon': 0.1, 'rbf_sigma': 0.1} | Cross validation error: 5.296716947048269
+ -  Parameter: {'C': 1e-09, 'kernel_type': 'rbf', 'tol': 0.01, 'epsilon': 0.1, 'rbf_sigma': 2.0} | Cross validation error: 5.29678333262685
+ -  Parameter: {'C': 1e-09, 'kernel_type': 'rbf', 'tol': 0.01, 'epsilon': 0.1, 'rbf_sigma': 1.37} | Cross validation error: 5.296816566416622
+ -  Parameter: {'C': 1e-07, 'kernel_type': 'rbf', 'tol': 0.01, 'epsilon': 0.1, 'rbf_sigma': 0.73} | Cross validation error: 5.296927526776555
+ -  Parameter: {'C': 1e-15, 'kernel_type': 'rbf', 'tol': 0.01, 'epsilon': 0.1, 'rbf_sigma': 1.37} | Cross validation error: 5.297017465069861
+ -  Parameter: {'C': 1e-15, 'kernel_type': 'rbf', 'tol': 0.01, 'epsilon': 0.1, 'rbf_sigma': 0.1} | Cross validation error: 5.297126047904192
+ -  Parameter: {'C': 1e-07, 'kernel_type': 'rbf', 'tol': 0.01, 'epsilon': 0.1, 'rbf_sigma': 2.0} | Cross validation error: 5.297422980648549
+----------------------------------------------------------------------------------------------------
+[*] Best parameter: {'C': 1.0, 'kernel_type': 'rbf', 'tol': 0.01, 'epsilon': 0.1, 'rbf_sigma': 2.0}
+[*] Best cross validation error: 4.950659002649907
+[*] Start to train on full training data and evaluate on test data ...
+----------------------------------------------------------------------------------------------------
+[*] Train file path: "dataset/airfoil_self_noise_training.csv"
+[*] Test file path: "dataset/airfoil_self_noise_testing.csv"
+[*] Datetime: 18:40:04
+[*] Best parameter: {'C': 1.0, 'kernel_type': 'rbf', 'tol': 0.01, 'epsilon': 0.1, 'rbf_sigma': 2.0}
+[*] Sample mean of bias: 125.0227675317118
+[*] Sample std of bias: 0.22234101367921522
+[*] Performance: Train error: 4.480607130960016 | Test error: 4.931021134271374
+----------------------------------------------------------------------------------------------------
+[*] Saving SVR hypothesis to "hypothesis/SVR_hypothesis_header-[18:40:04].csv" ...
+[*] Output SVR hypothesis to "hypothesis/SVR_hypothesis_header-[18:40:04].csv" success.
+----------------------------------------------------------------------------------------------------

@@ -73,7 +73,7 @@ if __name__ == '__main__':
             'epsilon': [args.epsilon]
         }
         if args.kernel_type == 'poly':
-            param_grid['poly_degree'] = [2, 3, 4, 5]
+            param_grid['poly_degree'] = [2, 3, 4]
         elif args.kernel_type == 'rbf':
             param_grid['rbf_sigma'] = np.linspace(0.1, 2.0, 4).round(2).tolist()
 
