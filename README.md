@@ -13,3 +13,4 @@ NTHU EE6550 Machine Learning slides and my code solutions for spring semester 20
   - Adaboost classifer with the shallow decision tree (depth 1) for binary classification.
 - [Kernel SVR](https://github.com/YuChunLOL/NTHU-Machine-Learning/tree/master/assignments/hw4-kernel-svr): Support Vector Regression, trained with Sequential Minimal Optimization.
 - [Neural Network](https://github.com/YuChunLOL/NTHU-Machine-Learning/tree/master/assignments/hw5-neural-network): A simple neural network trained with SGD for regression.
+- [Final Project](https://github.com/YuChunLOL/Kaggle-Quora-Question-Pairs): A solution report of Kaggle competition - Quora Question Pairs. Using various deep neural nets and XGboost to identify duplicate questions.
