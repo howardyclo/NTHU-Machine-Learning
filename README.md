@@ -3,8 +3,7 @@
 NTHU EE6550 Machine Learning slides and my code solutions for spring semester 2017.
 
 ## Notes
-- The assignments are mainly required to implement the ML/DL algorithms **from scratch** without using high-level library like `scikit-learn`.
-There will be 5 assignments and each is coded with `python/numpy`.
+- The assignments are mainly required to implement the ML/DL algorithms **from scratch** without using high-level library like `scikit-learn`, all are coded with `python/numpy`.
 
 ## Assignments
 - [PAC Learning Rectangle](https://github.com/YuChunLOL/NTHU-Machine-Learning/tree/master/assignments/hw1-PAC-learning-rectangle)
