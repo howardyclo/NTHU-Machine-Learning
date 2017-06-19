@@ -56,6 +56,7 @@ if __name__ == '__main__':
         param_grid = {
             'depth': [2, 3, 4, 5, 6],
             'reg_lambda': [0.0, 0.001, 0.01],
+            'learning_rate': [args.learning_rate],
             'max_iteration': [args.max_iteration]
         }
 
@@ -106,6 +107,7 @@ if __name__ == '__main__':
         param = {
             'depth': args.depth,
             'reg_lambda': args.reg_lambda,
+            'learning_rate': args.learning_rate,
             'max_iteration': args.max_iteration
         }
 

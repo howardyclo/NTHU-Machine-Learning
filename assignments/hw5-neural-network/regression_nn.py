@@ -125,11 +125,14 @@ class RegressionNN:
                 X_train, y_train = self._shuffle(self.X_train, self.y_train)
 
     def hypothesis(self, X):
+
+        weights = self.weights if self.training else self.best_weights
+
         # Make predictions on single example or multiple examples
         if X.ndim == 1:
-            return self.network.feed(self.best_weights, X)
+            return self.network.feed(weights, X)
         elif X.ndim == 2:
-            return np.array([self.network.feed(self.best_weights, x) for x in X])
+            return np.array([self.network.feed(weights, x) for x in X])
 
     def evaluation(self, X, y):
         # Default: Mean squared error + reg_lambda * regularization error.
