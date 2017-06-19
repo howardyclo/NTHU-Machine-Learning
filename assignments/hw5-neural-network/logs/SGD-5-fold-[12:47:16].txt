@@ -1,0 +1,37 @@
+----------------------------------------------------------------------------------------------------
+[*] Cross validation history:
+ -  Parameter: {'depth': 4, 'reg_lambda': 0.0, 'max_iteration': 30000} | Cross validation error: [ 4.08458964]
+ -  Parameter: {'depth': 2, 'reg_lambda': 0.0, 'max_iteration': 30000} | Cross validation error: [ 5.14624725]
+ -  Parameter: {'depth': 3, 'reg_lambda': 0.0, 'max_iteration': 30000} | Cross validation error: [ 5.33495332]
+ -  Parameter: {'depth': 3, 'reg_lambda': 0.001, 'max_iteration': 30000} | Cross validation error: [ 5.40552295]
+ -  Parameter: {'depth': 2, 'reg_lambda': 0.001, 'max_iteration': 30000} | Cross validation error: [ 5.64238829]
+ -  Parameter: {'depth': 5, 'reg_lambda': 0.001, 'max_iteration': 30000} | Cross validation error: [ 5.97097392]
+ -  Parameter: {'depth': 4, 'reg_lambda': 0.001, 'max_iteration': 30000} | Cross validation error: [ 6.02975134]
+ -  Parameter: {'depth': 6, 'reg_lambda': 0.0, 'max_iteration': 30000} | Cross validation error: [ 6.19784738]
+ -  Parameter: {'depth': 2, 'reg_lambda': 0.01, 'max_iteration': 30000} | Cross validation error: [ 6.27289822]
+ -  Parameter: {'depth': 2, 'reg_lambda': 0.005, 'max_iteration': 30000} | Cross validation error: [ 6.37716251]
+ -  Parameter: {'depth': 5, 'reg_lambda': 0.0, 'max_iteration': 30000} | Cross validation error: [ 6.58103282]
+ -  Parameter: {'depth': 3, 'reg_lambda': 0.005, 'max_iteration': 30000} | Cross validation error: [ 7.07741607]
+ -  Parameter: {'depth': 3, 'reg_lambda': 0.01, 'max_iteration': 30000} | Cross validation error: [ 7.7029069]
+ -  Parameter: {'depth': 4, 'reg_lambda': 0.005, 'max_iteration': 30000} | Cross validation error: [ 7.83644334]
+ -  Parameter: {'depth': 4, 'reg_lambda': 0.01, 'max_iteration': 30000} | Cross validation error: [ 8.09004805]
+ -  Parameter: {'depth': 6, 'reg_lambda': 0.001, 'max_iteration': 30000} | Cross validation error: [ 8.62358754]
+ -  Parameter: {'depth': 5, 'reg_lambda': 0.01, 'max_iteration': 30000} | Cross validation error: [ 8.63376377]
+ -  Parameter: {'depth': 5, 'reg_lambda': 0.005, 'max_iteration': 30000} | Cross validation error: [ 9.27886413]
+ -  Parameter: {'depth': 6, 'reg_lambda': 0.005, 'max_iteration': 30000} | Cross validation error: [ 10.59537494]
+ -  Parameter: {'depth': 6, 'reg_lambda': 0.01, 'max_iteration': 30000} | Cross validation error: [ 10.81596514]
+----------------------------------------------------------------------------------------------------
+[*] Best parameter: {'depth': 4, 'reg_lambda': 0.0, 'max_iteration': 30000}
+[*] Best cross validation error: [ 4.08458964]
+[*] Start to train on full training data and evaluate on test data ...
+----------------------------------------------------------------------------------------------------
+[*] Datetime: 14:11:18
+[*] Train file path: "dataset/energy_efficiency_cooling_load_training.csv"
+[*] Test file path: "dataset/energy_efficiency_cooling_load_testing.csv"
+[*] Best parameter: {'depth': 4, 'reg_lambda': 0.0, 'max_iteration': 30000}
+[*] Network shape: [(9, 20), (21, 20), (21, 20), (21, 1)]
+[*] Performance: Test error: [ 7.28077631]
+----------------------------------------------------------------------------------------------------
+[*] Saving SGD hypothesis to "hypothesis/SGD_hypothesis_header-[14:11:18].csv" ...
+[*] Output SGD hypothesis to "hypothesis/SGD_hypothesis_header-[14:11:18].csv" success.
+----------------------------------------------------------------------------------------------------
